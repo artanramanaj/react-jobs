@@ -9,12 +9,14 @@ import {
 } from "react-router-dom";
 import MainLayout from "./Layout/MainLayout";
 import NotFound from "./components/NotFound";
+import JobsPage from "./pages/JobsPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
+        <Route path="/jobs" element={<JobsPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </>,

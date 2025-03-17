@@ -3,7 +3,9 @@ import Hero from "../components/Hero";
 import HomeCards from "../components/HomeCards";
 import JobListings from "../components/JobListings";
 import ViewAllJobs from "../components/ViewAllJobs";
+import { useLocation } from "react-router-dom";
 function HomePage() {
+  const location = useLocation().pathname;
   return (
     <>
       <Hero
@@ -11,7 +13,7 @@ function HomePage() {
         subtitle=" Find the React job that fits your skills and needs"
       />
       <HomeCards />
-      <JobListings />
+      <JobListings location={location} />
       <ViewAllJobs />
     </>
   );

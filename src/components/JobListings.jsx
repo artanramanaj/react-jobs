@@ -2,8 +2,13 @@ import React from "react";
 import jobs from "../jobs.json";
 import JobListing from "./JobListing";
 
-function JobListings() {
-  const recentJobs = jobs.slice(0, 3);
+function JobListings({ location }) {
+  let recentJobs;
+  if (location == "/") {
+    recentJobs = jobs.slice(0, 3);
+  } else {
+    recentJobs = jobs;
+  }
   return (
     <section className="bg-blue-50 px-4 py-10">
       <div className="container-xl m-auto lg:container">
