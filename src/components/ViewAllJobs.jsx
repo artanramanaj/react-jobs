@@ -1,15 +1,15 @@
 import React from "react";
-
-function ViewAllJobs() {
+import { Link } from "react-router-dom";
+function ViewAllJobs({ url, text }) {
   return (
     <>
       <section className="m-auto my-10 max-w-lg px-6">
-        <a
-          href="/jobs"
+        <Link
+          to={url}
           className="block rounded-xl bg-black px-6 py-4 text-center text-white hover:bg-gray-700"
         >
-          View All Jobs
-        </a>
+          {text}
+        </Link>
       </section>
     </>
   );

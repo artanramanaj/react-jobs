@@ -14,7 +14,7 @@ function HomePage() {
       />
       <HomeCards />
       <JobListings location={location} />
-      <ViewAllJobs />
+      <ViewAllJobs url="/jobs" text="View All Jobs" />
     </>
   );
 }

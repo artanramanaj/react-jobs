@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaMapMarker } from "react-icons/fa";
-
+import { Link } from "react-router-dom";
 function JobListing({ job }) {
   const [showAllDesc, setShowAllDesc] = useState(true);
   return (
@@ -43,12 +43,12 @@ function JobListing({ job }) {
               <FaMapMarker className="fa-solid fa-location-dot text-orange-700" />
               <p className="text-indigo-500">{job.location}</p>
             </div>
-            <a
-              href={`/job/${job.id}`}
+            <Link
+              to={`/jobs/${job.id}`}
               className="h-[36px] rounded-lg bg-indigo-500 px-4 py-2 text-center text-sm text-white hover:bg-indigo-600"
             >
               Read More
-            </a>
+            </Link>
           </div>
         </div>
       </div>
