@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function JobListing({ job }) {
-  const [showAll, setShowAll] = useState(true);
+  const [showAllDesc, setShowAllDesc] = useState(true);
   return (
     <>
       <div key={job.id} className="relative rounded-xl bg-white shadow-md">
@@ -11,12 +11,12 @@ function JobListing({ job }) {
             <h3 className="text-xl font-bold">{job.title}</h3>
           </div>
 
-          {showAll == true ? (
+          {showAllDesc == true ? (
             <div>
               <div>{job.description.substring(0, 120) + "..."}</div>
               <p
-                className="mb-4 cursor-pointer text-blue-400 underline"
-                onClick={() => setShowAll((prev) => !prev)}
+                className="mb-4 cursor-pointer text-indigo-500 underline"
+                onClick={() => setShowAllDesc((prev) => !prev)}
               >
                 show more
               </p>
@@ -25,8 +25,8 @@ function JobListing({ job }) {
             <div>
               <div>{job.description}</div>
               <p
-                className="mb-4 cursor-pointer text-blue-400 underline"
-                onClick={() => setShowAll((prev) => !prev)}
+                className="mb-4 cursor-pointer text-indigo-500 underline"
+                onClick={() => setShowAllDesc((prev) => !prev)}
               >
                 show less
               </p>
