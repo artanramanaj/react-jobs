@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaMapMarker } from "react-icons/fa";
 
 function JobListing({ job }) {
   const [showAllDesc, setShowAllDesc] = useState(true);
@@ -39,8 +40,8 @@ function JobListing({ job }) {
 
           <div className="mb-4 flex flex-col justify-between lg:flex-row">
             <div className="mb-3 text-orange-700">
-              <i className="fa-solid fa-location-dot text-lg"></i>{" "}
-              {job.location}
+              <FaMapMarker className="fa-solid fa-location-dot text-orange-700" />
+              <p className="text-indigo-500">{job.location}</p>
             </div>
             <a
               href={`/job/${job.id}`}
