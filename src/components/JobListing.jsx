@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 
 function JobListing({ job }) {
+  const [showAll, setShowAll] = useState(true);
   return (
     <>
       <div key={job.id} className="relative rounded-xl bg-white shadow-md">
@@ -10,7 +11,27 @@ function JobListing({ job }) {
             <h3 className="text-xl font-bold">{job.title}</h3>
           </div>
 
-          <div className="mb-5">{job.description}</div>
+          {showAll == true ? (
+            <div>
+              <div>{job.description.substring(0, 120) + "..."}</div>
+              <p
+                className="mb-4 cursor-pointer text-blue-400 underline"
+                onClick={() => setShowAll((prev) => !prev)}
+              >
+                show more
+              </p>
+            </div>
+          ) : (
+            <div>
+              <div>{job.description}</div>
+              <p
+                className="mb-4 cursor-pointer text-blue-400 underline"
+                onClick={() => setShowAll((prev) => !prev)}
+              >
+                show less
+              </p>
+            </div>
+          )}
 
           <h3 className="mb-2 text-indigo-500">{job.salary}</h3>
 
