@@ -3,12 +3,14 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaMapMarker } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
-
+import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function JobPage() {
   const [job, setJob] = useState(null);
   const { id: jobId } = useParams();
   const [showSpinner, setShowSpinner] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const getJobs = async () => {
       const api = "/api/jobs";
@@ -28,6 +30,24 @@ function JobPage() {
     };
     getJobs();
   }, [jobId]);
+
+  const deleteJob = async () => {
+    try {
+      const response = await fetch(`/api/jobs/${jobId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+      const data = await response.json();
+      console.log(data);
+      toast.success("Job added successfully!");
+      navigate("/jobs");
+    } catch (error) {
+      throw new Error("can not delete this job");
+      toast.error("Failed to add job.");
+    }
+  };
 
   if (showSpinner) {
     return <Spinner />;
@@ -52,7 +72,7 @@ function JobPage() {
 
   return (
     <>
-      <pre>{JSON.stringify(job, null, 2)}</pre>
+      <div></div>
       <section>
         <div className="container m-auto px-6 py-6">
           <Link
@@ -67,7 +87,7 @@ function JobPage() {
 
       <section className="bg-indigo-50">
         <div className="container m-auto px-6 py-10">
-          <div className="md:grid-cols-70/30 grid w-full grid-cols-1 gap-6">
+          <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2">
             <main>
               <div className="rounded-lg bg-white p-6 text-center shadow-md md:text-left">
                 <div className="mb-4 text-gray-500">{job.type}</div>
@@ -114,7 +134,10 @@ function JobPage() {
                 >
                   Edit Job
                 </Link>
-                <button className="focus:shadow-outline mt-4 block w-full rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none">
+                <button
+                  onClick={deleteJob}
+                  className="focus:shadow-outline mt-4 block w-full cursor-pointer rounded-full bg-red-500 px-4 py-2 font-bold text-white hover:bg-red-600 focus:outline-none"
+                >
                   Delete Job
                 </button>
               </div>
@@ -122,6 +145,7 @@ function JobPage() {
           </div>
         </div>
       </section>
+      <ToastContainer position="bottom-right" autoClose={3000} />
     </>
   );
 }
