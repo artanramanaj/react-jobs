@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import JobListings from "../components/JobListings";
 import { useLocation } from "react-router-dom";
 import ViewAllJobs from "../components/ViewAllJobs";

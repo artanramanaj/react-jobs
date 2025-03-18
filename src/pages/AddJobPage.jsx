@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
-
+import "react-toastify/dist/ReactToastify.css";
 function AddJobPage() {
+  const navigate = useNavigate();
   const [type, setType] = useState("Full-Time");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -11,8 +13,11 @@ function AddJobPage() {
   const [company_description, setCompanyDescription] = useState("");
   const [contact_email, setContactEmail] = useState("");
   const [contact_phone, setContactPhone] = useState("");
+
+  useEffect(() => {
+    console.log("it is being fired");
+  }, []);
   const handleChange = (event) => {
-    event.preventDefault();
     const { name, value } = event.target;
     switch (name) {
       case "type":
@@ -47,18 +52,7 @@ function AddJobPage() {
     }
   };
   const submitFrom = (event) => {
-    event.preventDefault(); // Stop default form submission
-    console.log("2. After preventDefault");
-    console.log("check the event", type);
-    console.log("check the event", title);
-    console.log("check the event", description);
-    console.log("check the event", salary);
-    console.log("check the event", location);
-    console.log("check the event", company);
-    console.log("check the event", company_description);
-    console.log("check the event", contact_email);
-    console.log("check the event", contact_phone);
-
+    event.preventDefault();
     const body = {
       title: title,
       type: type,
@@ -79,7 +73,6 @@ function AddJobPage() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
-      redirect: "manual",
     })
       .then((response) => {
         if (!response.ok) {
@@ -89,13 +82,14 @@ function AddJobPage() {
       })
       .then((data) => {
         toast.success("Job added successfully!");
+        // navigate("/jobs");
         console.log("Fetch data:", data);
       })
       .catch((error) => {
         toast.error("Failed to add job.");
         console.error("Fetch error:", error);
       });
-
+    toast.success("Job added successfully!");
     console.log("submitFrom complete");
   };
 

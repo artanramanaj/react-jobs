@@ -43,73 +43,157 @@
       }
     },
     {
-      "id": "5",
-      "title": "Full Stack React Developer",
-      "type": "Full-Time",
-      "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
-      "location": "Atlanta, GA",
-      "salary": "$90K - $100K",
+      "id": "7794",
+      "title": "Et et consequuntur q",
+      "type": "Part-Time",
+      "description": "Dolor ea sint possim",
+      "location": "Officia nulla ipsum ",
+      "salary": "$60K - 70K",
       "company": {
-        "name": "Browning Technologies",
-        "description": "Browning Technologies is a rapidly growing technology company specializing in e-commerce solutions. We offer a dynamic and collaborative work environment where employees are encouraged to think creatively and innovate.",
-        "contactEmail": "contact@consecteturadipisicing.com",
-        "contactPhone": "555-555-5555"
+        "name": "Graham and Hendricks Co",
+        "description": "Id laudantium sint",
+        "contactEmail": "sivil@mailinator.com",
+        "contactPhone": "+1 (448) 526-5015"
       }
     },
     {
-      "id": "6",
-      "title": "React Native Developer",
-      "type": "Full-Time",
-      "description": "Join our team as a Front-End Developer in beautiful Portland, OR. We are looking for a skilled and enthusiastic individual to help us create innovative web solutions. Competitive salary and great benefits package available.",
-      "location": "Portland, OR",
-      "salary": "$100K - $110K",
-      "company": {
-        "name": "Port Solutions INC",
-        "description": "Port Solutions is a leading technology company specializing in software development and digital marketing. We are committed to providing our clients with cutting-edge solutions and our employees with a supportive and rewarding work environment.",
-        "contactEmail": "contact@ipsumlorem.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
-      "id": "9dca",
-      "title": "Voluptas et itaque e",
-      "type": "Full-Time",
-      "description": "Veritatis sequi id s",
-      "location": "Magni quae esse culp",
-      "salary": "$80K - 90K",
-      "company": {
-        "name": "Sanford Allison Associates",
-        "description": "Nemo ut fugiat quo e",
-        "contactEmail": "fedij@mailinator.com",
-        "contactPhone": "+1 (381) 223-4751"
-      }
-    },
-    {
-      "id": "98a5",
-      "title": "Ut nihil sunt suscip",
-      "type": "Full-Time",
-      "description": "Voluptatem Corrupti",
-      "location": "Voluptatem nisi temp",
-      "salary": "$70K - 80K",
-      "company": {
-        "name": "Perry and Lang Co",
-        "description": "Sint alias ducimus ",
-        "contactEmail": "cymo@mailinator.com",
-        "contactPhone": "+1 (257) 795-3878"
-      }
-    },
-    {
-      "id": "fa43",
-      "title": "Repellendus Amet d",
+      "id": "9fc5",
+      "title": "Dolor ipsum volupta",
       "type": "Internship",
-      "description": "Modi deleniti expedi",
-      "location": "Explicabo Ea quaera",
+      "description": "Ea omnis aut est rer",
+      "location": "Nisi beatae quis tot",
+      "salary": "$50K - 60K",
+      "company": {
+        "name": "Byers Rosa Associates",
+        "description": "Reiciendis sunt ab n",
+        "contactEmail": "xybyje@mailinator.com",
+        "contactPhone": "+1 (772) 279-5447"
+      }
+    },
+    {
+      "id": "689f",
+      "title": "Et nulla in unde vol",
+      "type": "Internship",
+      "description": "Aut ut sit qui cons",
+      "location": "Elit deleniti illo ",
       "salary": "$100K - 125K",
       "company": {
-        "name": "Stuart and Lewis Plc",
-        "description": "Excepteur molestiae ",
-        "contactEmail": "ryryzyki@mailinator.com",
-        "contactPhone": "+1 (309) 869-8656"
+        "name": "Wood Adkins Trading",
+        "description": "Eiusmod et aut offic",
+        "contactEmail": "tamyfyj@mailinator.com",
+        "contactPhone": "+1 (222) 899-8378"
+      }
+    },
+    {
+      "id": "bb4e",
+      "title": "Ullamco quia volupta",
+      "type": "Part-Time",
+      "description": "Et repudiandae aliqu",
+      "location": "In sapiente necessit",
+      "salary": "$175K - 200K",
+      "company": {
+        "name": "Chang Osborn Traders",
+        "description": "Veritatis officia fa",
+        "contactEmail": "lepyr@mailinator.com",
+        "contactPhone": "+1 (893) 691-3766"
+      }
+    },
+    {
+      "id": "5f0b",
+      "title": "Est nulla libero dol",
+      "type": "Full-Time",
+      "description": "Quaerat quia ut duis",
+      "location": "Eaque numquam ut aut",
+      "salary": "$50K - 60K",
+      "company": {
+        "name": "Salinas and Knapp Inc",
+        "description": "Cum aliquip dolore d",
+        "contactEmail": "fabaro@mailinator.com",
+        "contactPhone": "+1 (903) 199-8218"
+      }
+    },
+    {
+      "id": "aba7",
+      "title": "Cupidatat necessitat",
+      "type": "Full-Time",
+      "description": "Odio nisi omnis aut ",
+      "location": "Est excepturi vel a",
+      "salary": "$100K - 125K",
+      "company": {
+        "name": "Jenkins and England Trading",
+        "description": "Officia sapiente opt",
+        "contactEmail": "mubera@mailinator.com",
+        "contactPhone": "+1 (423) 662-8819"
+      }
+    },
+    {
+      "id": "9a95",
+      "title": "Possimus Nam labore",
+      "type": "Remote",
+      "description": "Commodo excepteur et",
+      "location": "Voluptas pariatur S",
+      "salary": "$150K - 175K",
+      "company": {
+        "name": "Mejia Mckenzie Trading",
+        "description": "Sed id autem officia",
+        "contactEmail": "tyducyjut@mailinator.com",
+        "contactPhone": "+1 (809) 966-3733"
+      }
+    },
+    {
+      "id": "e969",
+      "title": "Earum quo velit max",
+      "type": "Remote",
+      "description": "Natus id reprehende",
+      "location": "Dicta praesentium no",
+      "salary": "$125K - 150K",
+      "company": {
+        "name": "Vargas and Hunter Trading",
+        "description": "Elit sunt ex quis c",
+        "contactEmail": "jolyc@mailinator.com",
+        "contactPhone": "+1 (155) 634-6978"
+      }
+    },
+    {
+      "id": "44c5",
+      "title": "Mollitia dicta moles",
+      "type": "Internship",
+      "description": "Officia sit quidem ",
+      "location": "Error incidunt magn",
+      "salary": "$125K - 150K",
+      "company": {
+        "name": "Lott and Sellers Inc",
+        "description": "Voluptates et cum sa",
+        "contactEmail": "gycusij@mailinator.com",
+        "contactPhone": "+1 (702) 319-4138"
+      }
+    },
+    {
+      "id": "e546",
+      "title": "Qui fugiat beatae t",
+      "type": "Internship",
+      "description": "Veritatis enim rerum",
+      "location": "Consequatur Veritat",
+      "salary": "$175K - 200K",
+      "company": {
+        "name": "Ruiz and Schneider Traders",
+        "description": "Fugiat aut in facil",
+        "contactEmail": "zizi@mailinator.com",
+        "contactPhone": "+1 (453) 398-6102"
+      }
+    },
+    {
+      "id": "b7d2",
+      "title": "Cillum alias est exc",
+      "type": "Internship",
+      "description": "Dolor et aliquid mol",
+      "location": "Accusamus qui quia e",
+      "salary": "Under $50K",
+      "company": {
+        "name": "Warner and Strong Associates",
+        "description": "Eu praesentium quos ",
+        "contactEmail": "batux@mailinator.com",
+        "contactPhone": "+1 (492) 967-3264"
       }
     }
   ]
