@@ -2,10 +2,10 @@
   "jobs": [
     {
       "id": "2",
-      "title": "Front-End Engineer (React & Redux)",
+      "title": "Front-End Engineer (React & react)",
       "type": "Full-Time",
-      "location": "Miami, FL",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
+      "location": "Miami, FL",
       "salary": "$70K - $80K",
       "company": {
         "name": "Veneer Solutions",
@@ -99,20 +99,6 @@
       }
     },
     {
-      "id": "5f0b",
-      "title": "Est nulla libero dol",
-      "type": "Full-Time",
-      "description": "Quaerat quia ut duis",
-      "location": "Eaque numquam ut aut",
-      "salary": "$50K - 60K",
-      "company": {
-        "name": "Salinas and Knapp Inc",
-        "description": "Cum aliquip dolore d",
-        "contactEmail": "fabaro@mailinator.com",
-        "contactPhone": "+1 (903) 199-8218"
-      }
-    },
-    {
       "id": "aba7",
       "title": "Cupidatat necessitat",
       "type": "Full-Time",
@@ -124,20 +110,6 @@
         "description": "Officia sapiente opt",
         "contactEmail": "mubera@mailinator.com",
         "contactPhone": "+1 (423) 662-8819"
-      }
-    },
-    {
-      "id": "9a95",
-      "title": "Possimus Nam labore",
-      "type": "Remote",
-      "description": "Commodo excepteur et",
-      "location": "Voluptas pariatur S",
-      "salary": "$150K - 175K",
-      "company": {
-        "name": "Mejia Mckenzie Trading",
-        "description": "Sed id autem officia",
-        "contactEmail": "tyducyjut@mailinator.com",
-        "contactPhone": "+1 (809) 966-3733"
       }
     },
     {
@@ -183,17 +155,59 @@
       }
     },
     {
-      "id": "b7d2",
-      "title": "Cillum alias est exc",
-      "type": "Internship",
-      "description": "Dolor et aliquid mol",
-      "location": "Accusamus qui quia e",
-      "salary": "Under $50K",
+      "id": "b8d1",
+      "title": "full stack 2122",
+      "type": "Part-Time",
+      "description": "full stack dev 2",
+      "location": "kosovo1",
+      "salary": "Over $200K",
       "company": {
-        "name": "Warner and Strong Associates",
-        "description": "Eu praesentium quos ",
-        "contactEmail": "batux@mailinator.com",
-        "contactPhone": "+1 (492) 967-3264"
+        "name": "best company",
+        "description": "this is best company 2",
+        "contactEmail": "best@company.com",
+        "contactPhone": "555-555-5555111112"
+      }
+    },
+    {
+      "id": "b8d1",
+      "title": "Cum id sit maiores q",
+      "type": "Remote",
+      "description": "Incidunt ad volupta",
+      "location": "Recusandae Perferen",
+      "salary": "Over $200K",
+      "company": {
+        "name": "Bowman and Haney Associates",
+        "description": "Aspernatur tenetur q",
+        "contactEmail": "muza@mailinator.com",
+        "contactPhone": "+1 (253) 475-4999"
+      }
+    },
+    {
+      "id": "b8d1",
+      "title": "Cum id sit maiores q",
+      "type": "Remote",
+      "description": "Incidunt ad volupta",
+      "location": "Recusandae Perferen",
+      "salary": "Over $200K",
+      "company": {
+        "name": "Bowman and Haney Associates",
+        "description": "Aspernatur tenetur q",
+        "contactEmail": "muza@mailinator.com",
+        "contactPhone": "+1 (253) 475-4999"
+      }
+    },
+    {
+      "id": "46e7",
+      "title": "Pariatur Repellendu",
+      "type": "Full-Time",
+      "description": "Quia rerum in omnis ",
+      "location": "Repudiandae nostrud ",
+      "salary": "$125K - 150K",
+      "company": {
+        "name": "Farrell and Briggs Plc",
+        "description": "Voluptatibus numquam",
+        "contactEmail": "bofyluxaj@mailinator.com",
+        "contactPhone": "+1 (113) 508-8343"
       }
     }
   ]

@@ -1,18 +1,60 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import { useParams } from "react-router-dom";
+import Spinner from "../components/Spinner";
 import "react-toastify/dist/ReactToastify.css";
-function AddJobPage() {
+import { useRef } from "react";
+function EditJobPage() {
   const navigate = useNavigate();
-  const [type, setType] = useState("Full-Time");
+  const [type, setType] = useState("");
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [salary, setSalary] = useState("Over $200K");
+  const [salary, setSalary] = useState("");
   const [location, setLocation] = useState("");
   const [company, setCompany] = useState("");
   const [company_description, setCompanyDescription] = useState("");
   const [contact_email, setContactEmail] = useState("");
   const [contact_phone, setContactPhone] = useState("");
+
+  const [job, setJob] = useState(null);
+  const { id: jobId } = useParams();
+  const [showSpinner, setShowSpinner] = useState(false);
+  useEffect(() => {
+    const getJobs = async () => {
+      const api = "/api/jobs";
+      try {
+        setShowSpinner(true);
+        const res = await fetch(api);
+        const data = await res.json();
+        console.log("check final data", data);
+        const foundJob = data.find((d) => d.id == jobId);
+        setJob(foundJob || null);
+      } catch (error) {
+        console.log("error", error);
+        setJob(null);
+      } finally {
+        setShowSpinner(false);
+      }
+    };
+    getJobs();
+  }, []);
+
+  useEffect(() => {
+    if (job) {
+      setType(job.type);
+      setTitle(job.title);
+      setDescription(job.description);
+      setSalary(job.salary);
+      setLocation(job.location);
+      setCompany(job.company.name);
+      setCompanyDescription(job.company.description);
+      setContactEmail(job.company.contactEmail);
+      setContactPhone(job.company.contactPhone);
+    } else {
+      console.log("it doesnt exist");
+    }
+  }, [job]);
 
   useEffect(() => {
     console.log("it is being fired");
@@ -51,14 +93,16 @@ function AddJobPage() {
         break;
     }
   };
-  const submitFrom = (event) => {
+  const editJob = async (event) => {
     event.preventDefault();
+
     const body = {
-      title: title,
-      type: type,
-      description: description,
-      location: location,
-      salary: salary,
+      id: jobId,
+      title,
+      type,
+      description,
+      location,
+      salary,
       company: {
         name: company,
         description: company_description,
@@ -67,40 +111,42 @@ function AddJobPage() {
       },
     };
 
-    fetch("/api/jobs", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(body),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        toast.success("Job added successfully!");
-        navigate("/jobs");
-        console.log("Fetch data:", data);
-      })
-      .catch((error) => {
-        toast.error("Failed to add job.");
-        console.error("Fetch error:", error);
+    try {
+      const response = await fetch(`/api/jobs/${jobId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(body),
       });
-    toast.success("Job added successfully!");
+
+      const data = await response.json();
+      console.log("Fetch data:", data);
+      // toast.success("Job added successfully!");
+      // navigate("/jobs");
+    } catch (error) {
+      console.error("Fetch error:", error);
+      // toast.error("Failed to add job.");
+    } finally {
+      console.log("finished");
+    }
+
     console.log("submitFrom complete");
   };
 
+  if (showSpinner) {
+    return <Spinner />;
+  }
+
   return (
     <>
+      <pre>{JSON.stringify(job, null, 2)}</pre>
       <section className="bg-indigo-50">
         <div className="container m-auto max-w-2xl py-24">
           <div className="m-4 mb-4 rounded-md border bg-white px-6 py-8 shadow-md md:m-0">
-            <form onSubmit={submitFrom} method="POST" action="/api/jobs">
+            <form onSubmit={editJob} method="POST" action="/api/jobs">
               <h2 className="mb-6 text-center text-3xl font-semibold">
-                Add Job
+                Edit Job
               </h2>
 
               <div className="mb-4">
@@ -282,16 +328,16 @@ function AddJobPage() {
                   className="focus:shadow-outline w-full cursor-pointer rounded-full bg-indigo-500 px-4 py-2 font-bold text-white hover:bg-indigo-600 focus:outline-none"
                   type="submit"
                 >
-                  Add Job
+                  Edit Job
                 </button>
               </div>
             </form>
           </div>
         </div>
       </section>
-      <ToastContainer position="bottom-right" autoClose={3000} />
+      {/* <ToastContainer position="bottom-right" autoClose={3000} /> */}
     </>
   );
 }
 
-export default AddJobPage;
+export default EditJobPage;

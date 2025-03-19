@@ -3,33 +3,36 @@ import { FaArrowLeft } from "react-icons/fa6";
 import { FaMapMarker } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+
+const jobLoader = () => {};
+
 function JobPage() {
   const [job, setJob] = useState(null);
   const { id: jobId } = useParams();
   const [showSpinner, setShowSpinner] = useState(false);
   const navigate = useNavigate();
-  useEffect(() => {
-    const getJobs = async () => {
-      const api = "/api/jobs";
-      try {
-        setShowSpinner(true);
-        const res = await fetch(api);
-        const data = await res.json();
-        console.log("check final data", data);
-        const foundJob = data.find((d) => d.id == jobId);
-        setJob(foundJob || null);
-      } catch (error) {
-        console.log("error", error);
-        setJob(null);
-      } finally {
-        setShowSpinner(false);
-      }
-    };
-    getJobs();
-  }, [jobId]);
+  // useEffect(() => {
+  //   const getJobs = async () => {
+  //     const api = "/api/jobs";
+  //     try {
+  //       setShowSpinner(true);
+  //       const res = await fetch(api);
+  //       const data = await res.json();
+  //       console.log("check final data", data);
+  //       const foundJob = data.find((d) => d.id == jobId);
+  //       setJob(foundJob || null);
+  //     } catch (error) {
+  //       console.log("error", error);
+  //       setJob(null);
+  //     } finally {
+  //       setShowSpinner(false);
+  //     }
+  //   };
+  //   getJobs();
+  // }, [jobId]);
 
   const deleteJob = async () => {
     try {
@@ -129,7 +132,7 @@ function JobPage() {
               <div className="mt-6 rounded-lg bg-white p-6 shadow-md">
                 <h3 className="mb-6 text-xl font-bold">Manage Job</h3>
                 <Link
-                  to="/"
+                  to={`/edit-jobs/${jobId}`}
                   className="focus:shadow-outline mt-4 block w-full rounded-full bg-indigo-500 px-4 py-2 text-center font-bold text-white hover:bg-indigo-600 focus:outline-none"
                 >
                   Edit Job

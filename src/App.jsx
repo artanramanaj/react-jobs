@@ -1,7 +1,6 @@
 import { useState } from "react";
 import HomePage from "./pages/HomePage";
 import "./App.css";
-// import "react-toastify/dist/ReactToastify.css";
 import {
   Route,
   createBrowserRouter,
@@ -13,6 +12,7 @@ import NotFound from "./components/NotFound";
 import JobsPage from "./pages/JobsPage";
 import JobPage from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
+import EditJobPage from "./pages/EditJobPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,6 +22,7 @@ const router = createBrowserRouter(
         <Route path="/jobs" element={<JobsPage />} />
         <Route path="/jobs/:id" element={<JobPage />} />
         <Route path="/add-job" element={<AddJobPage />} />
+        <Route path="/edit-jobs/:id" element={<EditJobPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </>,
