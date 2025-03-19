@@ -39,7 +39,7 @@ function JobListing({ job }) {
           <div className="mb-5 border border-gray-100"></div>
 
           <div className="mb-4 flex flex-col justify-between lg:flex-row">
-            <div className="mb-3 text-orange-700">
+            <div className="mb-3 flex items-center gap-2 text-orange-700">
               <FaMapMarker className="fa-solid fa-location-dot text-orange-700" />
               <p className="text-indigo-500">{job.location}</p>
             </div>
