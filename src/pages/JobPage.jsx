@@ -1,39 +1,23 @@
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate, useLoaderData } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa6";
 import { FaMapMarker } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 import Spinner from "../components/Spinner";
-import { useNavigate, useLoaderData } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const jobLoader = () => {};
+const jobLoader = async ({ params }) => {
+  const res = await fetch(`/api/jobs/${params.id}`);
+  const data = await res.json();
+  return data;
+};
 
 function JobPage() {
-  const [job, setJob] = useState(null);
+  const job = useLoaderData();
   const { id: jobId } = useParams();
   const [showSpinner, setShowSpinner] = useState(false);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   const getJobs = async () => {
-  //     const api = "/api/jobs";
-  //     try {
-  //       setShowSpinner(true);
-  //       const res = await fetch(api);
-  //       const data = await res.json();
-  //       console.log("check final data", data);
-  //       const foundJob = data.find((d) => d.id == jobId);
-  //       setJob(foundJob || null);
-  //     } catch (error) {
-  //       console.log("error", error);
-  //       setJob(null);
-  //     } finally {
-  //       setShowSpinner(false);
-  //     }
-  //   };
-  //   getJobs();
-  // }, [jobId]);
-
+  console.log("check the job", job);
   const deleteJob = async () => {
     try {
       const response = await fetch(`/api/jobs/${jobId}`, {
@@ -153,4 +137,4 @@ function JobPage() {
   );
 }
 
-export default JobPage;
+export { JobPage as default, jobLoader };

@@ -1,34 +1,6 @@
 {
   "jobs": [
     {
-      "id": "2",
-      "title": "Front-End Engineer (React & react)",
-      "type": "Full-Time",
-      "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
-      "location": "Miami, FL",
-      "salary": "$70K - $80K",
-      "company": {
-        "name": "Veneer Solutions",
-        "description": "Veneer Solutions is a creative agency specializing in digital design and development. Our team is dedicated to pushing the boundaries of creativity and innovation to deliver exceptional results for our clients.",
-        "contactEmail": "contact@loremipsum.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
-      "id": "3",
-      "title": "React.js Dev",
-      "type": "Full-Time",
-      "location": "Brooklyn, NY",
-      "description": "Are you passionate about front-end development? Join our team in vibrant Brooklyn, NY, and work on exciting projects that make a difference. We offer competitive compensation and a collaborative work environment where your ideas are valued.",
-      "salary": "$70K - $80K",
-      "company": {
-        "name": "Dolor Cloud",
-        "description": "Dolor Cloud is a leading technology company specializing in digital solutions for businesses of all sizes. With a focus on innovation and customer satisfaction, we are committed to delivering cutting-edge products and services.",
-        "contactEmail": "contact@dolorsitamet.com",
-        "contactPhone": "555-555-5555"
-      }
-    },
-    {
       "id": "4",
       "title": "React Front-End Developer",
       "type": "Part-Time",
@@ -71,20 +43,6 @@
       }
     },
     {
-      "id": "689f",
-      "title": "Et nulla in unde vol",
-      "type": "Internship",
-      "description": "Aut ut sit qui cons",
-      "location": "Elit deleniti illo ",
-      "salary": "$100K - 125K",
-      "company": {
-        "name": "Wood Adkins Trading",
-        "description": "Eiusmod et aut offic",
-        "contactEmail": "tamyfyj@mailinator.com",
-        "contactPhone": "+1 (222) 899-8378"
-      }
-    },
-    {
       "id": "bb4e",
       "title": "Ullamco quia volupta",
       "type": "Part-Time",
@@ -124,90 +82,6 @@
         "description": "Elit sunt ex quis c",
         "contactEmail": "jolyc@mailinator.com",
         "contactPhone": "+1 (155) 634-6978"
-      }
-    },
-    {
-      "id": "44c5",
-      "title": "Mollitia dicta moles",
-      "type": "Internship",
-      "description": "Officia sit quidem ",
-      "location": "Error incidunt magn",
-      "salary": "$125K - 150K",
-      "company": {
-        "name": "Lott and Sellers Inc",
-        "description": "Voluptates et cum sa",
-        "contactEmail": "gycusij@mailinator.com",
-        "contactPhone": "+1 (702) 319-4138"
-      }
-    },
-    {
-      "id": "e546",
-      "title": "Qui fugiat beatae t",
-      "type": "Internship",
-      "description": "Veritatis enim rerum",
-      "location": "Consequatur Veritat",
-      "salary": "$175K - 200K",
-      "company": {
-        "name": "Ruiz and Schneider Traders",
-        "description": "Fugiat aut in facil",
-        "contactEmail": "zizi@mailinator.com",
-        "contactPhone": "+1 (453) 398-6102"
-      }
-    },
-    {
-      "id": "b8d1",
-      "title": "full stack 2122",
-      "type": "Part-Time",
-      "description": "full stack dev 2",
-      "location": "kosovo1",
-      "salary": "Over $200K",
-      "company": {
-        "name": "best company",
-        "description": "this is best company 2",
-        "contactEmail": "best@company.com",
-        "contactPhone": "555-555-5555111112"
-      }
-    },
-    {
-      "id": "b8d1",
-      "title": "Cum id sit maiores q",
-      "type": "Remote",
-      "description": "Incidunt ad volupta",
-      "location": "Recusandae Perferen",
-      "salary": "Over $200K",
-      "company": {
-        "name": "Bowman and Haney Associates",
-        "description": "Aspernatur tenetur q",
-        "contactEmail": "muza@mailinator.com",
-        "contactPhone": "+1 (253) 475-4999"
-      }
-    },
-    {
-      "id": "b8d1",
-      "title": "Cum id sit maiores q",
-      "type": "Remote",
-      "description": "Incidunt ad volupta",
-      "location": "Recusandae Perferen",
-      "salary": "Over $200K",
-      "company": {
-        "name": "Bowman and Haney Associates",
-        "description": "Aspernatur tenetur q",
-        "contactEmail": "muza@mailinator.com",
-        "contactPhone": "+1 (253) 475-4999"
-      }
-    },
-    {
-      "id": "46e7",
-      "title": "Pariatur Repellendu",
-      "type": "Full-Time",
-      "description": "Quia rerum in omnis ",
-      "location": "Repudiandae nostrud ",
-      "salary": "$125K - 150K",
-      "company": {
-        "name": "Farrell and Briggs Plc",
-        "description": "Voluptatibus numquam",
-        "contactEmail": "bofyluxaj@mailinator.com",
-        "contactPhone": "+1 (113) 508-8343"
       }
     }
   ]
